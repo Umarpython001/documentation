@@ -1,0 +1,95 @@
+Zedu Backend Local Setup Guide - this guide explains how to clone, install, configure, and run the Zedu Telex backend locally, the backend is a Go application and uses dependencies such as PostgreSQL, Redis, RabbitMQ, MongoDB, Elasticsearch, MinIO, and Centrifugo to run its development.
+
+STEP 1
+What You Need
+Before starting, you need:
+
+Git
+Go
+Make
+VS Code (recommended)
+Internet connection
+Enough disk space
+PostgreSQL 
+Redis 
+MinIO 
+MongoDB
+RabbitMQ 
+Elasticsearch 
+Firebase (Service Account Key) 
+Stripe account (for API key) 
+Centrifugo 
+
+Make sure all services are installed and running locally
+
+
+STEP 2
+Download Git
+
+Go
+Download: Go official downloads
+
+Download Go 1.24.7 for Windows
+Scroll down and Look for the Windows installer for 64-bit PCs:
+go1.24.7.windows-amd64.msi
+Download that .msi file.
+If your computer uses a different architecture, scroll down and check for it and download the .msi file
+Download and install: 
+MakePostgreSQL
+Redis 
+MinIO 
+MongoDB
+RabbitMQ 
+Elasticsearch 
+Firebase (Service Account Key) 
+Stripe account (for API key) 
+Centrifugo 
+
+
+STEP 3
+
+The backend repository currently requires:
+Go 1.24.0
+Go toolchain 1.24.7
+
+Verify Go:
+go version
+Expected:
+go version go1.24.7 windows/amd64
+
+
+STEP 4
+
+Download Zedu  Backend to your local
+
+run:
+git clone  https://github.com/zeduchat/zedu-be
+
+Enter Zedu-be Folder
+
+run:
+cd zedu-be
+
+
+STEP 5
+Request for staging credentials from Dev
+Create a file in your zedu-be Folder  and name it app.env
+Paste the Staging Credentials  into `app.env` Folder
+
+STEP 6
+Install Go dependencies. 
+
+run: 
+go mod tidy . 
+
+STEP 7
+Run the app. 
+
+run:
+go run main.go
+
+STEP 8
+Confirm that the API is running 
+
+run:
+`http://localhost:{port}`
